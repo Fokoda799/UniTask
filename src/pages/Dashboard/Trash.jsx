@@ -1,7 +1,9 @@
-import React from "react";
-
 const Trash = () => {
-  return <div>Trash</div>;
+  return (
+    <section className="">
+      <p>trash goes here a fatima</p>
+    </section>
+  );
 };
 
 export default Trash;

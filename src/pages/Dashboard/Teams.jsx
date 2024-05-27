@@ -1,7 +1,9 @@
-import React from "react";
-
 const Teams = () => {
-  return <div>Teams</div>;
+  return (
+    <section className="">
+      <p>teams goes here a fatima</p>
+    </section>
+  );
 };
 
 export default Teams;

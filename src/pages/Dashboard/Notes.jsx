@@ -1,7 +1,9 @@
-import React from "react";
-
 const Notes = () => {
-  return <div>Notes</div>;
+  return (
+    <section className="">
+      <p>notes goes here a fatima</p>
+    </section>
+  );
 };
 
 export default Notes;
