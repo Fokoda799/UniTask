@@ -1,10 +1,10 @@
-// This is the default express server to add a new route for the API.
-
-// Import nessesary modules.
-import express from 'express';
-import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import tasksRoutes from './routes/tasks.js';
+const express = require('express');
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const tasksRoutes = require('./routes/tasks.js');
+const helmet = require('helmet');
+const cors = require('cors');
+const morgan = require('morgan');
 
 // Express app.
 const app = express();
@@ -12,10 +12,19 @@ const app = express();
 // Configuration.
 dotenv.config();
 
-// Middelware.
-app.use(express.json());
+// Validate environment variables.
+if (!process.env.MONGO_URI) {
+  console.error('MONGO_URI is not defined in the environment variables');
+  process.exit(1);
+}
 
-app.use( (req, res, next) => {
+// Middleware.
+app.use(express.json());
+app.use(helmet());
+app.use(cors());
+app.use(morgan('combined'));
+
+app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
 });
@@ -23,12 +32,17 @@ app.use( (req, res, next) => {
 // Routes
 app.use('/api/tasks', tasksRoutes);
 
+// Global error handler.
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 // Database connection.
-mongoose.connect("mongodb+srv://UniTaskdb: UniTaskpassword@unitask.bpx8alw.mongodb.net/?retryWrites=true&w=majority&appName=UniTask")
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    // Listening port.
     app.listen(4000, () => {
-      console.log('Server is running on port ', 4000)
+      console.log('Server is running on port 4000');
     });
   })
   .catch((error) => {
