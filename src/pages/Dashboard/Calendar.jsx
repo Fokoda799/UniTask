@@ -1,7 +1,9 @@
-import React from "react";
-
 const Calendar = () => {
-  return <div>Calendar</div>;
+  return (
+    <section className=" ">
+      <p>calendar goes here a fatima</p>
+    </section>
+  );
 };
 
 export default Calendar;

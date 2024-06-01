@@ -1,7 +1,9 @@
-import React from "react";
-
 const Profile = () => {
-  return <div>Profile</div>;
+  return (
+    <section className="">
+      <p>profile goes here a fatima</p>
+    </section>
+  );
 };
 
 export default Profile;

@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidebar {
+  @apply hidden sm:flex flex-col justify-between h-screen  sm:w-48 lg:w-56 xl:w-72 bg-white py-5 pl-8  shadow-sm;
+}
+.root-container {
+  @apply bg-stone-100 w-full  py-0 flex-1 overflow-auto  lg:mt-0 lg:max-h-screen shadow-sm;
+}
+
+.dashboardRoot {
+  @apply border-red-300 border-dotted;
+}
+/* .active { */
+/*   @apply bg-purple-300 ; */
+/* } */
+
+.appColor {
+  @apply bg-purple-900/70;
+}

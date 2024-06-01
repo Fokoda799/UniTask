@@ -1,7 +1,9 @@
-import React from "react";
-
 const Tasks = () => {
-  return <div>Tasks</div>;
+  return (
+    <section className="">
+      <p>tasks goes here a fatima</p>
+    </section>
+  );
 };
 
 export default Tasks;
