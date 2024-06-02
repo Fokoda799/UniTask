@@ -1,8 +1,10 @@
 const Trash = () => {
   return (
-    <section className="">
-      <p>trash goes here a fatima</p>
-    </section>
+    <>
+      <section className="">
+        <p>trash</p>
+      </section>
+    </>
   );
 };
 

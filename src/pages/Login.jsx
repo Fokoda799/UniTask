@@ -3,7 +3,7 @@ import { TextField } from "@mui/material";
 const Login = () => {
   return (
     <div className="p-10 rounded-lg bg-gray-50 drop-shadow-md m-auto border">
-      <h1 className="text-main-purple text-center text-xl font-bold font-['Poppins'] leading-tight">
+      <h1 className="text-purple-900/70 text-center text-xl font-bold font-['Poppins'] leading-tight">
         Log in to Unitask
       </h1>
       <div className="text-center text-neutral-800 text-base font-light font-['Poppins'] leading-snug tracking-tight">
@@ -15,13 +15,13 @@ const Login = () => {
             label="Email"
             variant="standard"
             type="email"
-            className="bg-[#fdfdfd] rounded-[10px] w-80 md:w-96 sm:w-full focus:text-main-purple"
+            className="bg-[#fdfdfd] rounded-[10px] w-80 md:w-96 sm:w-full focus:border-purple-900/70"
           />
           <TextField
             label="Password"
             variant="standard"
             type="password"
-            className="bg-[#fdfdfd] rounded-[10px] w-80 md:w-96 sm:w-full focus:text-main-purple"
+            className="bg-[#fdfdfd] rounded-[10px] w-80 md:w-96 sm:w-full focus:border-purple-900/70"
           />
         </div>
 

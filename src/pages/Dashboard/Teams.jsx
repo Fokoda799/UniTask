@@ -1,9 +1,11 @@
-const Teams = () => {
+const Projects = () => {
   return (
-    <section className="">
-      <p>teams goes here a fatima</p>
-    </section>
+    <>
+      <section className="">
+        <p>teams</p>
+      </section>
+    </>
   );
 };
 
-export default Teams;
+export default Projects;

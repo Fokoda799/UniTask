@@ -1,8 +1,10 @@
 const Projects = () => {
   return (
-    <section className="">
-      <p>projects goes here a fatima</p>
-    </section>
+    <>
+      <section className="">
+        <p>projects</p>
+      </section>
+    </>
   );
 };
 
